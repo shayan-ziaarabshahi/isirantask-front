@@ -11,12 +11,12 @@ import DatePicker from "./components/DatePicker";
 import { toast } from "react-toastify";
 import PN from "persian-number";
 import momentJalaali from "moment-jalaali";
-import { useSelector, useDispatch } from "react-redux";
-import { setUsersAction } from "./redux/slices/usersSlice";
+
+
 
 function App() {
-  const usersSelector = useSelector((state) => state.usersSlice);
-  const dispatch = useDispatch();
+
+  
 
   const [users, setUsers] = useState([]);
 
@@ -28,7 +28,6 @@ function App() {
         url: `${process.env.REACT_APP_BACKEND_DOMAIN}/api/users`,
       });
       setUsers(res.data);
-      dispatch(setUsersAction({users: res.data}))
     } catch (err) {
       console.log(err);
     }
@@ -68,7 +67,6 @@ function App() {
       });
       toast("با موفقیت ثبت شد.");
       setUsers([...users, res.data.newUser]);
-      dispatch(setUsersAction({users: [...usersSelector.users, res.data.newUser]}))
     } catch (err) {
       console.log(err);
     }
@@ -120,12 +118,11 @@ function App() {
         if (user._id === data.userId) {
           return res.data;
         } else {
-          return user;
+          return user
         }
       });
-      console.log(updatedList);
+      console.log(updatedList)
       setUsers(updatedList);
-      dispatch(setUsersAction({users: updatedList}))
     } catch (err) {
       console.log(err);
     }

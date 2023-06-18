@@ -1,0 +1,143 @@
+.container {
+
+}
+
+.header {
+    padding: 1rem;
+}
+
+.addButton {
+    background-color: green;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid black;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tableContainer {
+    padding: 1rem;
+    overflow: auto;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table thead{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+
+.table thead td {
+    border-color: white;
+}
+
+.table td {
+    border: 1px solid black;
+    padding: 1rem;
+}
+
+.operationsTD {
+    display: flex;
+    gap: 1rem;
+}
+
+.deleteButton,.editButton {
+    color: white;
+    font-size: 1.25rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.deleteButton {
+    background-color: red;
+}
+.editButton {
+    background-color: rgb(136, 136, 0);
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100vh;
+}
+
+.addDataBox {
+    position: fixed;
+    top: 2rem;
+    left: 1rem;
+    width: calc(100% - 2rem);
+    background-color: white;
+    z-index: 1;
+    border-radius: 2rem;
+}
+
+.addDataBoxHeader {
+    padding: 1rem;
+}
+
+.CloseButton {
+    cursor: pointer;
+}
+
+.addDataBoxBody {
+    padding: 1rem;
+}
+
+.formFieldsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.fieldContainer {
+    margin-bottom: 1rem;
+}
+
+.fieldContainer label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.textInput {
+    padding: 0.5rem;
+    outline: none;
+    width: 180px;
+}
+
+.errorMessage {
+    display: block;
+    font-size: small;
+    color: red;
+    margin-top: 0.5rem;
+}
+
+.addDataBoxFooter {
+    padding: 1rem;
+    margin-top: auto;
+}
+
+.formSubmitButton {
+    display: inline-block;
+    margin-top: auto;
+    padding: 0.5rem 1rem;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    width: 200px;
+    border-radius: 1rem;
+    border: 2px solid black;
+}
